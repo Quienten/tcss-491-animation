@@ -39,6 +39,7 @@ class Runner {
     };
 
     draw(ctx) {
+        ctx.imageSmoothingEnabled = false;
         if(this.direction && this.x < this.RIGHT_DOORS[this.doorPos][0]) {
             this.animator.drawFrame(this.game.clockTick, ctx, this.x, this.y, 3)
         } else if(!this.direction && this.x > this.LEFT_DOORS[this.doorPos][0]) {
